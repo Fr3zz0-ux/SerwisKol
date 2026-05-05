@@ -41,11 +41,13 @@ export default function Navbar() {
   };
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "bg-[#050505]/90 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.8)] py-3" : "bg-gradient-to-b from-black/80 to-transparent py-6"
-        }`}
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "py-3" : "py-6"}`}
     >
-      <div className="container mx-auto px-6 flex items-center justify-between">
+      {/* Tło paska nawigacji - oddzielone, by nie psuć fixed dla menu mobilnego */}
+      <div className={`absolute inset-0 transition-all duration-500 ${scrolled ? "bg-[#050505]/90 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.8)]" : "bg-gradient-to-b from-black/80 to-transparent"}`}></div>
+
+      <div className="container mx-auto px-6 flex items-center justify-between relative z-50">
         <Link href="/" onClick={scrollToTop} className="flex items-center gap-2">
           <Image
             src="/images/logo.png"
@@ -127,6 +129,6 @@ export default function Navbar() {
           Umów wizytę
         </Link>
       </div>
-    </nav>
+    </header>
   );
 }
