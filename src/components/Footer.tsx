@@ -36,7 +36,7 @@ export default function Footer() {
               <div>
                 <h4 className="font-bold text-lg mb-1">Zadzwoń do nas</h4>
                 <p className="text-gray-400 leading-relaxed">
-                  <a href="tel:+48123456789" className="hover:text-primary transition-colors">+48 609 033 739</a>
+                  <a href="tel:+48609033739" className="hover:text-primary transition-colors">+48 609 033 739</a>
                 </p>
               </div>
             </div>

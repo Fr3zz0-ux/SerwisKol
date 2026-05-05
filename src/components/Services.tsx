@@ -19,6 +19,7 @@ export default function Services() {
                   src="/images/mechanic_vulcanization.png"
                   alt="Wulkanizacja Opon"
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
               </div>
@@ -88,6 +89,7 @@ export default function Services() {
                   src="/images/ac_service.png"
                   alt="Serwis Klimatyzacji"
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
               </div>

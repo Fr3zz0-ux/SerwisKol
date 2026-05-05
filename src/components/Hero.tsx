@@ -20,6 +20,7 @@ export default function Hero() {
           alt="Garaż Serwisu Samochodowego"
           fill
           priority
+          sizes="100vw"
           className="object-cover object-center scale-105"
         />
         {/* Luksusowy gradient overlay + winieta */}
