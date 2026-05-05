@@ -72,7 +72,7 @@ export default function Pricing() {
         </h2>
 
         {/* Zakładki */}
-        <div className="flex justify-center mb-12 gap-4 md:gap-6">
+        <div className="flex flex-col sm:flex-row justify-center mb-12 gap-4 md:gap-6">
           <button
             onClick={() => setActiveTab("wulkanizacja")}
             className={`flex items-center gap-3 px-8 md:px-12 py-4 rounded-xl font-bold text-sm md:text-base transition-all duration-500 tracking-widest border ${
@@ -103,7 +103,7 @@ export default function Pricing() {
           
           {/* Przełącznik lub Tytuł w zależności od zakładki */}
           {activeTab === "wulkanizacja" ? (
-            <div className="flex justify-center items-center gap-6 mb-12 relative z-10">
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 mb-12 relative z-10">
               <span className={`font-semibold text-sm md:text-base transition-colors duration-300 ${vehicleType === "osobowe" ? "text-white" : "text-gray-500"}`}>
                 Osobowe i SUV
               </span>
@@ -132,8 +132,8 @@ export default function Pricing() {
               }
             `}</style>
             
-            <div className="overflow-x-auto pb-4">
-              <div className={`min-w-[800px]`}>
+            <div className="overflow-x-auto pb-4 -mx-6 px-6 md:mx-0 md:px-0">
+              <div className={`min-w-[600px] md:min-w-[800px]`}>
                 
                 {/* Nagłówki */}
                 <div className={`${getGridColsClass()} gap-4 pb-6 border-b border-white/10 text-xs md:text-sm text-gray-400 font-semibold tracking-wider uppercase`}>
