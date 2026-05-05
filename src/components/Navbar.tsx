@@ -32,13 +32,21 @@ export default function Navbar() {
     }
   };
 
+  const scrollToTop = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (pathname === "/") {
+      e.preventDefault();
+      setMobileMenuOpen(false);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? "bg-[#050505]/90 backdrop-blur-xl shadow-[0_10px_30px_rgba(0,0,0,0.8)] py-3" : "bg-gradient-to-b from-black/80 to-transparent py-6"
         }`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" onClick={scrollToTop} className="flex items-center gap-2">
           <Image
             src="/images/logo.png"
             alt="Logo Serwis Kół"
