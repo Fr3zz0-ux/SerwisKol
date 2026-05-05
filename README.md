@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
 
-## Getting Started
+# 🔧 Serwis Kół — Premium Automotive Website
 
-First, run the development server:
+**A modern, high-end website for a professional tire & air conditioning service shop.**  
+Built with Next.js 16, Tailwind CSS v4, and a dark glassmorphism design system.
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-serwis--kol.vercel.app-da291c?style=for-the-badge&logo=vercel&logoColor=white)](https://serwis-kol.vercel.app)
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-v4-06B6D4?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+
+</div>
+
+---
+
+## ✨ Features
+
+- 🎨 **Premium Dark Design** — Deep black background with red accent colors, glassmorphism cards and cinematic vignette effects
+- 📱 **Fully Responsive** — Mobile-first with a full-screen hamburger menu for phones
+- 🎬 **Scroll Animations** — Custom `ScrollReveal` component using `IntersectionObserver` for smooth `fade-up`, `fade-left`, `fade-right`, and `zoom-in` entrance animations
+- 🏷️ **Interactive Pricing Table** — Switchable tabs (Vulcanization / Air Conditioning) with a vehicle type toggle
+- ❓ **FAQ Accordion** — Smooth expanding/collapsing FAQ section
+- 🗺️ **Google Maps Embed** — Interactive map with grayscale-to-color hover effect
+- ♾️ **Marquee Animation** — Infinite scrolling brand logo strip (16 tire brands)
+- ⚡ **Optimized Images** — Next.js `<Image>` with `priority`, `sizes`, and `fill` for LCP performance
+- 🔒 **Legal Pages** — Privacy Policy (`/polityka-prywatnosci`) and Terms of Service (`/regulamin`)
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| **Next.js 16** (App Router) | Framework, routing, SSG |
+| **Tailwind CSS v4** | Styling & design system |
+| **TypeScript** | Type safety |
+| **Lucide React** | Icons |
+| **Vercel** | Hosting & deployment |
+
+---
+
+## 🚀 Getting Started
 
 ```bash
+# Clone the repository
+git clone https://github.com/Fr3zz0-ux/SerwisKol.git
+cd SerwisKol
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📁 Project Structure
 
-## Learn More
+```
+src/
+├── app/
+│   ├── page.tsx                    # Main page — assembles all sections
+│   ├── layout.tsx                  # Root layout with metadata & fonts
+│   ├── globals.css                 # Global styles & CSS variables
+│   ├── polityka-prywatnosci/       # Privacy Policy page
+│   └── regulamin/                  # Terms of Service page
+└── components/
+    ├── Navbar.tsx                  # Sticky navbar with mobile hamburger menu
+    ├── Hero.tsx                    # Full-screen hero section
+    ├── Logos.tsx                   # Animated brand marquee
+    ├── Services.tsx                # Tire & AC service sections
+    ├── Features.tsx                # Glassmorphism bento box features
+    ├── Pricing.tsx                 # Interactive pricing table
+    ├── Testimonials.tsx            # Customer reviews with star ratings
+    ├── Faq.tsx                     # Accordion FAQ section
+    ├── Gallery.tsx                 # Photo gallery
+    ├── Footer.tsx                  # Contact info, map & legal links
+    ├── ScrollReveal.tsx            # Scroll-triggered animation engine
+    └── Teaser.tsx                  # Video teaser section
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🎨 Design Highlights
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The design follows a **luxury automotive brand** aesthetic:
 
-## Deploy on Vercel
+- **Color palette:** Near-black `#050505` background · Red accent `#da291c` → `#ff4b3e` gradient
+- **Typography:** Montserrat (Black 900 for headings, Light 300 for body)
+- **Cards:** Glassmorphism — `backdrop-blur-xl` + `bg-white/5` + `border-white/5`
+- **Glow effects:** `box-shadow` with `rgba(218,41,28,0.X)` for red ambient light
+- **Animations:** CSS transitions + `IntersectionObserver`-based scroll reveals
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📦 Deployment
+
+The project is deployed on **Vercel** with automatic production builds.
+
+```bash
+# Deploy to production manually
+npx vercel --prod --yes
+```
+
+---
+
+<div align="center">
+
+Made with ❤️ by **[Mateusz Bogacki](https://github.com/Fr3zz0-ux)**
+
+</div>
