@@ -26,6 +26,8 @@ export default function Navbar() {
       const contactSection = document.getElementById("kontakt");
       if (contactSection) {
         contactSection.scrollIntoView({ behavior: "smooth" });
+        // Ustawiamy hash w URL, żeby nawigacja była spójna
+        window.history.pushState(null, "", "/#kontakt");
       }
     } else {
       setMobileMenuOpen(false);
@@ -37,6 +39,8 @@ export default function Navbar() {
       e.preventDefault();
       setMobileMenuOpen(false);
       window.scrollTo({ top: 0, behavior: "smooth" });
+      // Resetujemy hash w URL, aby ponowne kliknięcie w linki typu #faq działało poprawnie
+      window.history.pushState(null, "", "/");
     }
   };
 
@@ -77,7 +81,7 @@ export default function Navbar() {
         <div className="hidden lg:flex items-center gap-6">
           <div className="flex items-center gap-2 text-sm">
             <Phone size={16} className="text-[#da291c]" />
-            <span className="font-bold">+48 609 033 739</span>
+            <Link href="tel:+48609033739" className="hover:text-primary transition-colors font-bold">+48 609 033 739</Link>
           </div>
           <Link
             href="/#kontakt"
@@ -89,7 +93,7 @@ export default function Navbar() {
         </div>
 
         {/* Hamburger (Mobile) */}
-        <button 
+        <button
           className="lg:hidden relative z-50 text-white p-2"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
@@ -98,10 +102,9 @@ export default function Navbar() {
       </div>
 
       {/* Menu Mobilne (Pełnoekranowe) */}
-      <div 
-        className={`fixed inset-0 bg-[#050505]/95 backdrop-blur-2xl z-40 transition-all duration-500 lg:hidden flex flex-col items-center justify-center gap-8 ${
-          mobileMenuOpen ? "opacity-100 pointer-events-auto translate-y-0" : "opacity-0 pointer-events-none -translate-y-10"
-        }`}
+      <div
+        className={`fixed inset-0 bg-[#050505]/95 backdrop-blur-2xl z-40 transition-all duration-500 lg:hidden flex flex-col items-center justify-center gap-8 ${mobileMenuOpen ? "opacity-100 pointer-events-auto translate-y-0" : "opacity-0 pointer-events-none -translate-y-10"
+          }`}
       >
         <Link href="/#o-nas" onClick={() => setMobileMenuOpen(false)} className="text-2xl font-bold text-gray-200 hover:text-white">
           O nas
@@ -115,12 +118,12 @@ export default function Navbar() {
         <Link href="/#kontakt" onClick={scrollToContact} className="text-2xl font-bold text-gray-200 hover:text-white">
           Kontakt
         </Link>
-        
+
         <div className="flex items-center gap-2 mt-8 mb-4">
           <Phone size={20} className="text-[#da291c]" />
-          <span className="font-bold text-xl">+48 609 033 739</span>
+          <a href="tel:+48609033739" className="hover:text-[#da291c] transition-colors text-xl font-bold">+48 609 033 739</a>
         </div>
-        
+
         <Link
           href="/#kontakt"
           onClick={scrollToContact}

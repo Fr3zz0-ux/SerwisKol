@@ -14,7 +14,7 @@
   --color-card: var(--card-bg);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --animate-marquee: marquee 80s linear infinite;
+  --animate-marquee: marquee 70s linear infinite;
   --animate-marquee-reverse: marquee-reverse 70s linear infinite;
 }
 
