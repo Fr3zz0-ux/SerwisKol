@@ -12,9 +12,9 @@ export default function Teaser() {
           playsInline
           className="w-full h-full object-cover opacity-50"
         >
-          {/* Używamy tymczasowego darmowego wideo jako placeholdera.
+          {/* Używamy tymczasowego darmowego wideo motoryzacyjnego jako placeholdera.
               Gdy będziesz miał swój plik wideo, wrzuć go do folderu public/ i podmień src. */}
-          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+          <source src="https://raw.githubusercontent.com/intel-iot-devkit/sample-videos/master/car-detection.mp4" type="video/mp4" />
           Twój przeglądarka nie obsługuje tagu wideo.
         </video>
         <div className="absolute inset-0 bg-gradient-to-t from-background via-black/40 to-black/80"></div>
