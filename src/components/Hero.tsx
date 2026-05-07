@@ -16,7 +16,7 @@ export default function Hero() {
     <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero_bg.png"
+          src="/images/hero_bg.webp"
           alt="Garaż Serwisu Samochodowego"
           fill
           priority
